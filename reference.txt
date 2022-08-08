@@ -1,5 +1,11 @@
-To generate a users controller for the api:
+To generate a users controller for the api.
 
 CODE: rails generate controller api::v1::users
 
+
+To see all the routes(wrt a particular controller) and there uri format.
+
+CODE: rails routes | grep users
+
+This shows that we now have a path to our resources and can use the GET function.
 

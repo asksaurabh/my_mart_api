@@ -16,6 +16,8 @@ This shows that we now have a path to our resources and can use the GET function
 
 :unproccessable_entity -> 422 (the server understands the content type of the request entity, and the syntax of the request entity is correct, but it was unable to process the contained instructions.)
 
+:no_content -> 204 (a request has succeeded, but that the client doesn't need to navigate away from its current page. Used for PUT/DELETE)
+
 4) PUT AND PATCH
 PUT is used when we want to modify all the parameters of a resource.
 PATCH is used to update some portion of the existing resource.

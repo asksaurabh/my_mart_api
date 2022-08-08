@@ -9,3 +9,9 @@ CODE: rails routes | grep users
 
 This shows that we now have a path to our resources and can use the GET function.
 
+HTTP CODE RESPONSES AND THEIR EQUIVALENT IN rails:
+:success -> 200
+
+:created -> 201 (the demand was met and resulted in the creation of a new resource after the POST requests.)
+
+:unproccessable_entity -> 422 (the server understands the content type of the request entity, and the syntax of the request entity is correct, but it was unable to process the contained instructions.)

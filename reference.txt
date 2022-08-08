@@ -1,0 +1,5 @@
+To generate a users controller for the api:
+
+CODE: rails generate controller api::v1::users
+
+

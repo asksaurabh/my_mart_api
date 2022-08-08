@@ -21,3 +21,48 @@ This shows that we now have a path to our resources and can use the GET function
 4) PUT AND PATCH
 PUT is used when we want to modify all the parameters of a resource.
 PATCH is used to update some portion of the existing resource.
+
+5) Test GET function
+Step 1: Create 3 users in the users table
+Step 2: Open console and run rails server
+Step 3: Open another console and test the endpoint using these cURL commands.
+
+curl http://127.0.0.1:3000/api/v1/users/1
+curl http://127.0.0.1:3000/api/v1/users/2
+curl http://127.0.0.1:3000/api/v1/users/3
+curl http://127.0.0.1:3000/api/v1/users/4
+
+6) Test POST function
+Step 1: Open console and run rails server
+Step 2: Open another console and test the endpoint using these cURL commands.
+Step 3: Run User.all to see if new record added or not 
+
+curl --request POST -d 'user[email]=sau@gmail.com' -d 'user[password]=foobar' localhost:3000/api/v1/users
+
+curl --request POST -d 'user[email]=saugmail.com' -d 'user[password]=foobar' localhost:3000/api/v1/users
+
+Now enter invalid or taken emails and see the responses too
+
+7) Test PUT/PATCH function
+Step 1: Open console and run rails server
+Step 2: Open another console and test the endpoint using these cURL commands.
+
+Shoot a PUT request
+curl --request PUT -d 'user[email]=newmail@gmail.com' -d 'user[password]=12345' localhost:3000/api/v1/users/1
+
+Check if updated or not(Shoot a GET request)
+curl http://127.0.0.1:3000/api/v1/users/1
+
+Shoot a PATCH request
+curl --request PATCH -d 'user[email]=hey@gmail.com' localhost:3000/api/v1/users/1
+
+Check if updated or not(Shoot a GET request)
+curl http://127.0.0.1:3000/api/v1/users/1
+
+7) Test DELETE function
+Step 1: Open console and run rails server
+Step 2: Open another console and test the endpoint using these cURL commands.
+
+curl --request DELETE http://127.0.0.1:3000/api/v1/users/4
+
+Step 3: Run User.all to see if record deleted or not 

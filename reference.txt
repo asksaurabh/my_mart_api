@@ -1,17 +1,21 @@
-To generate a users controller for the api.
+1) To generate a users controller for the api.
 
 CODE: rails generate controller api::v1::users
 
 
-To see all the routes(wrt a particular controller) and there uri format.
+2) To see all the routes(wrt a particular controller) and there uri format.
 
 CODE: rails routes | grep users
 
 This shows that we now have a path to our resources and can use the GET function.
 
-HTTP CODE RESPONSES AND THEIR EQUIVALENT IN rails:
+3) HTTP CODE RESPONSES AND THEIR EQUIVALENT IN rails:
 :success -> 200
 
 :created -> 201 (the demand was met and resulted in the creation of a new resource after the POST requests.)
 
 :unproccessable_entity -> 422 (the server understands the content type of the request entity, and the syntax of the request entity is correct, but it was unable to process the contained instructions.)
+
+4) PUT AND PATCH
+PUT is used when we want to modify all the parameters of a resource.
+PATCH is used to update some portion of the existing resource.

@@ -133,3 +133,7 @@ Ideally, a user’s products should be deleted along with the user.
 TRY CREATING A Product
 Product.create! title: 'abcd', user_id: '1', price: '1'
 
+13) Product's Endpoints
+We will build five REST actions, show, list, create, update, and destroy.
+
+The show function will return the information of the product identified by the id.

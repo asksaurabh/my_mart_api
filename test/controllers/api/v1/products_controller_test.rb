@@ -12,4 +12,9 @@ class Api::V1::ProductsControllerTest < ActionDispatch::IntegrationTest
     json_response = JSON.parse(self.response.body)
     assert_equal @product.title, json_response['title']
   end
+
+  test "should show products" do
+    get api_v1_products_url(), as: :json
+    assert_response :success
+  end
 end

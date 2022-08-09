@@ -137,3 +137,6 @@ Product.create! title: 'abcd', user_id: '1', price: '1'
 We will build five REST actions, show, list, create, update, and destroy.
 
 The show function will return the information of the product identified by the id.
+
+List Products
+Add a function that will list the products for the user.

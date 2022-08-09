@@ -118,3 +118,13 @@ Ensure that the user who is logged in will only be able to update their own data
 
 Logs in the user.
 headers: { Authorization: JsonWebToken.encode(user_id: @user.id) }
+
+12) Generating the Product Model
+These are the items that the user will sell in the application and will be directly linked to it.
+
+Associate the User model with the Product model using the has_many and belongs_to.
+
+We will first create a Product model. Then we’ll add some validations and, finally, associate it with the User model.
+
+REMEMBER:
+Ideally, a user’s products should be deleted along with the user.

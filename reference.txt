@@ -76,3 +76,8 @@ JWT.decode(token, 'my_secret_key')
 
 The JsonWebToken class
 This class will encode and decode the JWT tokens.
+
+Token’s Controller
+Set up the route that will be used by the application to create the tokens. The actions we will implement will be managed as RESTful services. The connection will be managed by a POST request to the create action.
+
+rails generate controller api::v1::tokens create

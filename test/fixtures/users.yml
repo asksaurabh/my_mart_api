@@ -1,4 +1,4 @@
 # Test users
 saurabh: 
   email: devtastic@gmail.com
-  password_digest: something_hashed
+  password_digest: <%= BCrypt::Password.create('foobar') %>

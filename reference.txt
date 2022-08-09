@@ -81,3 +81,15 @@ Token’s Controller
 Set up the route that will be used by the application to create the tokens. The actions we will implement will be managed as RESTful services. The connection will be managed by a POST request to the create action.
 
 rails generate controller api::v1::tokens create
+
+We only need the POST request for the tokens controller as we will not need to view, edit, or delete the tokens.
+
+The
+ user receives a token if they send a valid email/password pair.
+Otherwise, the server responds with a forbidden response.
+
+9) LOGIC to create JWT Token
+1. We always filter parameters with the method user_params.
+2. We retrieve the user with the method User.find_by_emailwhich is a “magic” method of Active Record since the field email is present in the database).
+3. We use the method User#authenticate—which exists thanks to the gem bcrypt—with the password as a parameter. The bcrypt gem will hash the password and check if it matches the attribute password_digest. The function returns true if everything went well, and returns false if not.
+4. A JSON containing the token generated with the class JsonWebToken is returned if the password corresponds to the hash. Otherwise, an empty response is returned with an unauthorized header.

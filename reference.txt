@@ -66,3 +66,13 @@ Step 2: Open another console and test the endpoint using these cURL commands.
 curl --request DELETE http://127.0.0.1:3000/api/v1/users/4
 
 Step 3: Run User.all to see if record deleted or not 
+
+8) Authentication
+When it comes to authentication tokens, the JSON Web Token (JWT) is the standard. JWT is an open standard that allows the secure exchange of tokens between several parties.
+
+JWT GEM interface:
+token = JWT.encode({message: 'Hello World'},'my_secret_key')
+JWT.decode(token, 'my_secret_key')
+
+The JsonWebToken class
+This class will encode and decode the JWT tokens.

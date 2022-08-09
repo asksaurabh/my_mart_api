@@ -84,12 +84,24 @@ rails generate controller api::v1::tokens create
 
 We only need the POST request for the tokens controller as we will not need to view, edit, or delete the tokens.
 
+9) LOGIC to create JWT Token
 The
  user receives a token if they send a valid email/password pair.
-Otherwise, the server responds with a forbidden response.
+Otherwise, the server responds with a forbidden response. 
 
-9) LOGIC to create JWT Token
 1. We always filter parameters with the method user_params.
 2. We retrieve the user with the method User.find_by_emailwhich is a “magic” method of Active Record since the field email is present in the database).
 3. We use the method User#authenticate—which exists thanks to the gem bcrypt—with the password as a parameter. The bcrypt gem will hash the password and check if it matches the attribute password_digest. The function returns true if everything went well, and returns false if not.
 4. A JSON containing the token generated with the class JsonWebToken is returned if the password corresponds to the hash. Otherwise, an empty response is returned with an unauthorized header.
+
+10) Find the logged user.
+the API returns the authentication token to the client if credentials are correct.
+implement how to find the corresponding user of the authentication token given in the HTTP header. We’ll need to do so each time this client requests an entry point that requires permission.
+We will use the HTTP header Authorization for this purpose
+
+CREATE a current_user method to meet our needs. It will find the user associated with the authentication token sent with each request. 
+
+We get the token from the header Authorization and look for the corresponding user. Nothing complicated.
+
+For authentication tests
+Struct that mimics the behaviour of a Rails request by using a headers attribute of the type Hash

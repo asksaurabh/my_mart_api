@@ -15,7 +15,7 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create new user" do
-    new_email = "kk@gmail.com"
+    new_email = "srk@gmail.com"
     password = "1234"
     assert_difference('User.count') do
       post api_v1_users_url, params: { user: { email: new_email, 
@@ -35,7 +35,7 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    new_email = "kk@gmail.com"
+    new_email = "new@gmail.com"
     password = "1234"
     patch api_v1_user_url(@user), 
     params: { user: { email: new_email, password: password }}, 

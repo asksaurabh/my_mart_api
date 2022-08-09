@@ -128,3 +128,8 @@ We will first create a Product model. Then we’ll add some validations and, fin
 
 REMEMBER:
 Ideally, a user’s products should be deleted along with the user.
+
+
+TRY CREATING A Product
+Product.create! title: 'abcd', user_id: '1', price: '1'
+

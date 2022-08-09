@@ -2,3 +2,7 @@
 saurabh: 
   email: devtastic@gmail.com
   password_digest: <%= BCrypt::Password.create('foobar') %>
+
+rishabh:
+  email: kk@gmail.com
+  password_digest: <%= BCrypt::Password.create('barfoo') %>

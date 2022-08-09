@@ -105,3 +105,16 @@ We get the token from the header Authorization and look for the corresponding us
 
 For authentication tests
 Struct that mimics the behaviour of a Rails request by using a headers attribute of the type Hash
+
+11) Authentication with the Token
+Limit the users' access to their own profiles so the users can only change their own profiles.
+
+Authorization plays a vital role in constructing applications because it helps define what the user can do. We have a route to update the user, but there is a problem; anyone can update any user.
+
+FOCUS:
+Implement a method that will require the user to be logged in to prevent unauthorized access.
+
+Ensure that the user who is logged in will only be able to update their own data and delete their own account.
+
+Logs in the user.
+headers: { Authorization: JsonWebToken.encode(user_id: @user.id) }

@@ -140,3 +140,6 @@ The show function will return the information of the product identified by the i
 
 List Products
 Add a function that will list the products for the user.
+
+CREATE Products 
+Assign the created product to the user who owns the JWT token provided in the HTTP header Authorization.

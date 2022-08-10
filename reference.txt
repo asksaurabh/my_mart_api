@@ -170,3 +170,17 @@ Then use these two commands to see the information of the first user with and wi
 
 >> Product.first
 >> ProductSerializer.new( Product.first ).serializable_hash
+
+16)  Display user attributes in the output for product request.
+
+Use include.
+We will include all the objects’ relationships in an included key. Each object will also include a relationship key that defines the relationship and must be found in the included key.
+
+TO SEE a PRETTY JSON OUTPUT 
+
+step 1: Install jq command line tool
+sudo apt install jq
+
+Step 2: curl http://127.0.0.1:3000/api/v1/products/1 >> sample.json
+
+Step 3: jq . sample.json

@@ -191,3 +191,5 @@ Step 1: Empty the contents of sample.json: echo > sample.json
 Step 2: curl http://127.0.0.1:3000/api/v1/users/6 >> sample.json
 
 Step 3: jq . sample.json
+
+18) Filter by title(case-insensitive), Filter by price(lower or higher), Sort by creation date

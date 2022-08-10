@@ -1,11 +1,17 @@
 one:
   title: comb
-  price: 10
+  price: 1000
   published: false
   user: saurabh
 
 two:
-  title: shirt
-  price: 9.99
+  title: TV Plosmo Philopps
+  price: 800
   published: false
   user: rishabh
+
+another_tv:
+  title: Cheap TV
+  price: 99.99
+  published: false
+  user: saurabh

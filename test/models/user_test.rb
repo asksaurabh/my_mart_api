@@ -22,7 +22,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "destroy user should destroy linked product" do
-    assert_difference('Product.count', -1) do 
+    assert_difference('Product.count', -2) do 
       users(:saurabh).destroy 
     end
   end

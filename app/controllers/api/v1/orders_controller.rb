@@ -1,4 +1,13 @@
 class Api::V1::OrdersController < ApplicationController
+  before_action :check_login, only: %i[index]
 
-  
+  # GET orders/
+  def index
+    render json: OrderSerializer.new(current_user.orders).serializable_hash.to_json
+  end
+
+  private
+    def check_login
+      head :forbidden unless self.current_user
+    end
 end

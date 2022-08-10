@@ -210,3 +210,6 @@ rails generate model Placement order:belongs_to product:belongs_to
 An index action to retrieve current user orders.
 A show action to retrieve a particular order from the current user.
 A create action to place the order.
+
+23) Add Orders endpoints
+before_action :check_login, only: %i[index] checks if the user has an active session before the orders can be displayed.

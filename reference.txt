@@ -145,3 +145,8 @@ CREATE Products
 Assign the created product to the user who owns the JWT token provided in the HTTP header Authorization.
 
 Prevent unauthorized access to update product details
+
+14) Presentation of JSON output
+An essential and challenging part of creating our API is deciding the output format. Fortunately, some conventions already exist. Indeed, most the common come from JSON:API.
+
+gem 'jsonapi-serializer'

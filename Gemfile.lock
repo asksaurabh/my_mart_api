@@ -99,6 +99,8 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     jwt (2.4.1)
     loofah (2.18.0)
       crass (~> 1.0.2)
@@ -209,6 +211,7 @@ DEPENDENCIES
   capybara (= 3.37.1)
   debug
   faker
+  jsonapi-serializer
   jwt
   minitest (= 5.15.0)
   minitest-reporters (= 1.5.0)

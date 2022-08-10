@@ -205,3 +205,8 @@ We need to set up the association between the order and the product with a has-m
 Each product can be placed in multiple orders and each order can have multiple products.
 
 rails generate model Placement order:belongs_to product:belongs_to
+
+22) Expose the Order model to the client by adding endpoints.
+An index action to retrieve current user orders.
+A show action to retrieve a particular order from the current user.
+A create action to place the order.

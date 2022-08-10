@@ -1,9 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  user: one
+  user: saurabh
   total: 9.99
 
 two:
-  user: two
-  total: 9.99
+  user: rishabh
+  total: 10

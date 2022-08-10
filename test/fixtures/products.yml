@@ -1,15 +1,15 @@
 one:
-  title: comb
-  price: 1000
+  title: TV Plosmo Philopps
+  price: 9999.99
   published: false
   user: saurabh
 
 two:
-  title: TV Plosmo Philopps
-  price: 800
+  title: Azos Zeenbok
+  price: 499.99
   published: false
   user: rishabh
-
+  
 another_tv:
   title: Cheap TV
   price: 99.99

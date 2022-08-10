@@ -11,7 +11,7 @@ class Api::V1::ProductsController < ApplicationController
 
   # GET /products
   def index
-    @product = Product.all 
+    @product = Product.search(params)
     render json: ProductSerializer.new(@products).serializable_hash.to_json
   end
 

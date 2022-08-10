@@ -193,3 +193,7 @@ Step 2: curl http://127.0.0.1:3000/api/v1/users/6 >> sample.json
 Step 3: jq . sample.json
 
 18) Filter by title(case-insensitive), Filter by price(lower or higher), Sort by creation date
+
+19) Search Engine
+Implement a search engine for the products.
+It will manage all the logic to retrieve the product records.

@@ -199,3 +199,9 @@ Implement a search engine for the products.
 It will manage all the logic to retrieve the product records.
 
 20) Orders Model
+
+21) Placement Model
+We need to set up the association between the order and the product with a has-many-to-many association.
+Each product can be placed in multiple orders and each order can have multiple products.
+
+rails generate model Placement order:belongs_to product:belongs_to

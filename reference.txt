@@ -150,3 +150,16 @@ Prevent unauthorized access to update product details
 An essential and challenging part of creating our API is deciding the output format. Fortunately, some conventions already exist. Indeed, most the common come from JSON:API.
 
 gem 'jsonapi-serializer'
+
+The JSON:API Serializer uses the serializer class of Ruby. Serializers are Ruby classes responsible for converting a model into a Hash or a JSON.
+
+To serialize the User:
+rails generate serializer User email
+
+This serializer will convert our User object to JSON, which implements all JSON:API specifications. Since we specified email as attributes, we will retrieve it in the data array.
+
+Then use these two commands to see the information of the first user with and without the use of the serializer, respectively:
+
+>> User.first
+>> UserSerializer.new( User.first ).serializable_hash
+The serialized output is much more optimized.

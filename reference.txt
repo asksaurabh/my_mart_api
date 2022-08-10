@@ -163,3 +163,10 @@ Then use these two commands to see the information of the first user with and wi
 >> User.first
 >> UserSerializer.new( User.first ).serializable_hash
 The serialized output is much more optimized.
+
+15) Serialize the Product model to get the desired JSON output.
+
+Then use these two commands to see the information of the first user with and without the serializer, respectively:
+
+>> Product.first
+>> ProductSerializer.new( Product.first ).serializable_hash
